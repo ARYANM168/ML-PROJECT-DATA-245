@@ -1,0 +1,60 @@
+{
+  "target_ci_lifecycle": {
+    "origins_2024": {
+      "folds": 23,
+      "model_beats_seasonal": 14,
+      "mean_fold_diff": -3.672309922267823,
+      "bootstrap_95ci": [
+        -11.068258723351597,
+        3.851128453494555
+      ]
+    },
+    "origins_2025": {
+      "folds": 51,
+      "model_beats_seasonal": 26,
+      "mean_fold_diff": -0.5288709977574981,
+      "bootstrap_95ci": [
+        -3.197404763327042,
+        2.0282034893020895
+      ]
+    },
+    "all": {
+      "folds": 74,
+      "model_beats_seasonal": 40,
+      "mean_fold_diff": -1.5058857986188152,
+      "bootstrap_95ci": [
+        -4.4288411841867825,
+        1.3198165675279847
+      ]
+    }
+  },
+  "target_ci_combustion": {
+    "origins_2024": {
+      "folds": 23,
+      "model_beats_seasonal": 12,
+      "mean_fold_diff": -3.2631351124280834,
+      "bootstrap_95ci": [
+        -9.594558360133702,
+        2.959589515050839
+      ]
+    },
+    "origins_2025": {
+      "folds": 51,
+      "model_beats_seasonal": 25,
+      "mean_fold_diff": -0.20554641009261274,
+      "bootstrap_95ci": [
+        -2.4647652918293717,
+        1.9878930713976883
+      ]
+    },
+    "all": {
+      "folds": 74,
+      "model_beats_seasonal": 37,
+      "mean_fold_diff": -1.155878033791475,
+      "bootstrap_95ci": [
+        -3.6573180721259866,
+        1.2014692461932488
+      ]
+    }
+  }
+}

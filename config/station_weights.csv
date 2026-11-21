@@ -1,0 +1,9 @@
+# Station-to-BA weights. Team decision (2026-11-18): CA ISO only, equal weight per station.
+# Weights per BA sum to 1 across its stations. Missing station-days are handled by
+# renormalizing over the stations that reported that day (see pipeline/weather.py).
+station_id,ba,weight
+USW00023174,CISO,0.2
+USW00023188,CISO,0.2
+USW00023234,CISO,0.2
+USW00023232,CISO,0.2
+USW00093193,CISO,0.2

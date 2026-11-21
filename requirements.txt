@@ -1,0 +1,9 @@
+# Versions observed in the development environment on 2026-11-18.
+# PUDL is not pip-pinned here: install it from conda-forge as catalystcoop.pudl
+# and record its exact version in the provenance record.
+pandas==3.1.0
+numpy==2.2.5
+pyarrow==24.0.0
+pytest==9.0.2
+scikit-learn==1.6.1
+matplotlib==3.11.2

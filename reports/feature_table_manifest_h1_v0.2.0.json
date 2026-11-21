@@ -1,0 +1,231 @@
+{
+  "version": "h1_v0.2.0",
+  "built_utc": "2026-11-18T23:21:37+00:00",
+  "date_range": [
+    "2019-01-01",
+    "2025-12-31"
+  ],
+  "horizon_hours": 1,
+  "parquet": "data/processed/h1_v0.2.0/feature_table.parquet",
+  "sha256": "4d19613cf5ede5e2255138d570ac88c352dbf4fa01aadb4d344bb4a7d9f492c4",
+  "rows": 61272,
+  "feature_count": 27,
+  "features": [
+    "ci_lag_1",
+    "ci_lag_2",
+    "ci_lag_24",
+    "ci_lag_48",
+    "ci_lag_168",
+    "ci_roll6_mean",
+    "ci_roll6_std",
+    "ci_roll24_mean",
+    "ci_roll24_std",
+    "demand_lag_1",
+    "demand_lag_2",
+    "demand_lag_24",
+    "demand_lag_48",
+    "demand_lag_168",
+    "demand_roll6_mean",
+    "demand_roll6_std",
+    "demand_roll24_mean",
+    "demand_roll24_std",
+    "hour_sin",
+    "hour_cos",
+    "day_of_week",
+    "month",
+    "day_of_year",
+    "is_weekend",
+    "wx_prev_tmax",
+    "wx_prev_tmin",
+    "wx_prev_awnd"
+  ],
+  "targets": [
+    "target_ci_lifecycle",
+    "target_ci_combustion"
+  ],
+  "split_rows_in_panel": {
+    "test": 13104,
+    "train": 43800,
+    "validate": 4368
+  },
+  "splits": [
+    {
+      "split": "train",
+      "start_utc": "2019-01-01T00:00:00+00:00",
+      "end_utc": "2023-12-31T23:00:00+00:00",
+      "rows_in_range": 43800,
+      "first_observed": "2019-01-01T00:00:00+00:00",
+      "last_observed": "2023-12-31T23:00:00+00:00"
+    },
+    {
+      "split": "validate",
+      "start_utc": "2024-01-01T00:00:00+00:00",
+      "end_utc": "2024-06-30T23:00:00+00:00",
+      "rows_in_range": 4368,
+      "first_observed": "2024-01-01T00:00:00+00:00",
+      "last_observed": "2024-06-30T23:00:00+00:00"
+    },
+    {
+      "split": "test",
+      "start_utc": "2024-07-01T00:00:00+00:00",
+      "end_utc": "2025-12-31T23:00:00+00:00",
+      "rows_in_range": 13104,
+      "first_observed": "2024-07-01T00:00:00+00:00",
+      "last_observed": "2025-12-31T23:00:00+00:00"
+    }
+  ],
+  "no_future_check": {
+    "lead_hours": 1,
+    "samples": 40,
+    "features_checked": 27,
+    "passed_future_perturbation": 40,
+    "failed_timestamps": [],
+    "positive_control_detected": 40,
+    "result": "PASS"
+  },
+  "model_results": {
+    "target_ci_lifecycle": {
+      "fixed_split": {
+        "train_rows": 43545,
+        "validate": {
+          "model": {
+            "n": 4368,
+            "mae": 11.5847000728767,
+            "rmse": 15.64102519895275
+          },
+          "persistence_1h": {
+            "n": 4368,
+            "mae": 11.637796620143453,
+            "rmse": 18.232501588841153
+          },
+          "persistence_168h": {
+            "n": 4368,
+            "mae": 38.664996901956506,
+            "rmse": 51.681636613072904
+          },
+          "seasonal_4w": {
+            "n": 4368,
+            "mae": 35.54303021817731,
+            "rmse": 47.391981719654105
+          }
+        },
+        "test": {
+          "model": {
+            "n": 13040,
+            "mae": 11.355118768700951,
+            "rmse": 15.478624691951564
+          },
+          "persistence_1h": {
+            "n": 13040,
+            "mae": 11.797266343423473,
+            "rmse": 19.153723649674923
+          },
+          "persistence_168h": {
+            "n": 13040,
+            "mae": 41.06382178251685,
+            "rmse": 52.904372950115516
+          },
+          "seasonal_4w": {
+            "n": 12965,
+            "mae": 36.65748919270507,
+            "rmse": 47.281244766922256
+          },
+          "model_hydro_present_rows": {
+            "n": 13040,
+            "mae": 11.355118768700951,
+            "rmse": 15.478624691951564
+          }
+        }
+      }
+    },
+    "target_ci_combustion": {
+      "fixed_split": {
+        "train_rows": 43545,
+        "validate": {
+          "model": {
+            "n": 4368,
+            "mae": 10.490599314419814,
+            "rmse": 14.333004067941975
+          },
+          "persistence_1h": {
+            "n": 4368,
+            "mae": 10.593537055094549,
+            "rmse": 16.980883408638906
+          },
+          "persistence_168h": {
+            "n": 4368,
+            "mae": 32.76324583793405,
+            "rmse": 43.8485222173867
+          },
+          "seasonal_4w": {
+            "n": 4368,
+            "mae": 30.258645501496073,
+            "rmse": 40.27783554217187
+          }
+        },
+        "test": {
+          "model": {
+            "n": 13040,
+            "mae": 10.364637557076705,
+            "rmse": 14.162683510413029
+          },
+          "persistence_1h": {
+            "n": 13040,
+            "mae": 10.846762070914835,
+            "rmse": 17.995737946719082
+          },
+          "persistence_168h": {
+            "n": 13040,
+            "mae": 34.82836028831254,
+            "rmse": 44.8009431125733
+          },
+          "seasonal_4w": {
+            "n": 12965,
+            "mae": 31.158023272550476,
+            "rmse": 40.15205848272212
+          },
+          "model_hydro_present_rows": {
+            "n": 13040,
+            "mae": 10.364637557076705,
+            "rmse": 14.162683510413029
+          }
+        }
+      }
+    }
+  },
+  "build": {
+    "grid_hours": 61368,
+    "mapped_fuels": [
+      "COL",
+      "NG",
+      "NUC",
+      "SUN",
+      "WAT",
+      "WND"
+    ],
+    "fuels_required_for_ci": [
+      "COL",
+      "NG",
+      "NUC",
+      "SUN",
+      "WND"
+    ],
+    "excluded_fuels": [
+      "GEO",
+      "OIL",
+      "OTH"
+    ],
+    "ci_hours_nan_after_rules": 46,
+    "ci_hours_hydro_missing": 7907,
+    "dropped_days": [
+      "2023-11-10",
+      "2024-11-02",
+      "2024-11-03",
+      "2024-11-08"
+    ],
+    "rows_after_sparse_day_rule": 61272,
+    "rows_dropped_sparse_day": 96,
+    "noaa_station_count_min": 0,
+    "noaa_station_count_max": 5
+  }
+}
