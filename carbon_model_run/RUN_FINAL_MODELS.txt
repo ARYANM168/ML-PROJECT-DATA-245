@@ -1,0 +1,40 @@
+FINAL MODEL RUN
+===============
+
+1. Put these files in the same folder:
+   - carbon_forecast_models_final.py
+   - requirements_final_models.txt
+
+2. Open PowerShell in that folder and install the packages:
+
+   py -m pip install -r requirements_final_models.txt
+
+3. Run the final experiment:
+
+   py carbon_forecast_models_final.py
+
+The script downloads the public CAISO target the first time, caches it as
+caiso_hourly.csv, and then evaluates the three baselines plus:
+
+   - Elastic Net
+   - Random Forest
+   - Gradient Boosting
+
+It uses the same timestamp-safe lags, chronological monthly folds, horizons,
+MAE, RMSE, MASE, top-six hit rate, regret, and capture metrics as the report.
+
+The files needed for updating the report are:
+
+   results_all_models_summary.csv
+   results_all_models_summary.txt
+   results_all_models_by_fold.csv
+   model_run_metadata.txt
+   weekly_alignment_check.csv
+   weekly_alignment_check.png
+
+Do not use the demo option for report numbers. The demo is only a quick test
+that the installation works:
+
+   py carbon_forecast_models_final.py --data-source demo --demo-days 900
+
+For the report, use only the results from the default command.

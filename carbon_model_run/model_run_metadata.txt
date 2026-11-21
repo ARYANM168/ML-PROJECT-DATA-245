@@ -1,0 +1,11 @@
+Final learned-model carbon-intensity run
+=========================================
+First valid target hour: 2018-07-01 01:00:00
+Last target hour: 2026-11-01 00:00:00
+Nonempty monthly folds: 88
+Horizons: [1, 6, 24]
+Random seed: 42
+Tree estimators: 100
+Models: persistence, seasonal_naive_24, seasonal_naive_168, elastic_net, random_forest, gradient_boosting
+Features: timestamp-safe target lags plus calendar sin/cos features
+Emission factors: direct-combustion placeholders documented in the report
